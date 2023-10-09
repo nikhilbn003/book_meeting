@@ -38,7 +38,7 @@ const LocationInput = () => {
     const state = address.state || '';
     const country = address.country || '';
     const postalCode = address.postcode || '';
-
+  
     let buildingInfo = '';
     if (buildingName) {
       buildingInfo = buildingName;
@@ -47,11 +47,10 @@ const LocationInput = () => {
     } else {
       buildingInfo = area;
     }
-
-    return `${buildingInfo}, ${city}, ${state}, ${country} ${postalCode}`;
   
+    return `${buildingInfo}, ${city}, ${state}, ${country} ${postalCode}`;
   };
-
+  
   const showError = (error) => {
     console.error('Error getting location:', error);
   };
